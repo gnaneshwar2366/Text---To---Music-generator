@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  input[type="range"].slider {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  input[type="range"].slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #06b6d4;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  input[type="range"].slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+
+  input[type="range"].slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #06b6d4;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  input[type="range"].slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+  }
+
+  input[type="range"].slider:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  input[type="range"].slider:disabled::-webkit-slider-thumb {
+    cursor: not-allowed;
+  }
+
+  input[type="range"].slider:disabled::-moz-range-thumb {
+    cursor: not-allowed;
+  }
+}
